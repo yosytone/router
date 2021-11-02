@@ -12,5 +12,8 @@ else if ($route == 'login'){
 else if ($route == 'catalog'){
     require 'templates/catalog.php';
 }
+else if ($route == 'admin'){
+    require 'templates/admin.php';
+}
 
 require 'templates/footer.php';

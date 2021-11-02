@@ -1,52 +1,48 @@
-body {
-    background: #ffffff;
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	padding: 0;
 }
 
-#search {
-    height: 600px;
+a{
+	text-decoration: none;
+	color: #232327;
 }
 
-form {
-    width: 480px;
-    height: 160px;
-    background: #b89eff;
-    margin: 0 auto;
-    padding: 30px;
-    color: white;
+.div-art{
+	width: 900px;
+	margin: 0 auto;
+	border-left: 1px solid #CBCBCB;
+	border-right: 1px solid #CBCBCB;
 }
 
-
-input {
-    margin: 8px 0;
+.form-art{
+	margin: 20px;
 }
 
-
-
-input[type="submit"]:hover {
-    cursor: pointer;
-    background-color: rgb(167, 228, 218);
+.insrt-field{
+	font-size: 24px;
 }
 
-h1 {
-    background: #b89eff;
+.title, .text{
+	width: 350px;
 }
 
-.menu {
-    background: #b89eff;
-    height: 48px;;
-}
-
-#s {
-    text-align: center;
-    width: 100%;
-}
-
-footer {
-    position:static;
-    margin-top: 0px;
+.cart img{
+	width: 25%;
+	height: auto;
+	margin-left: 5%;
+	margin-bottom: 50px;
 }
 
 
+
+
+#start {
+    background-color: rgb(154, 100, 255);
+}
 
 .block {
     height: 200px;
@@ -62,4 +58,5 @@ footer {
 .block img{
     width: 100%;
     height: auto;
+    
 }

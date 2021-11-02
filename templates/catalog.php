@@ -2,10 +2,14 @@
 <?php
 	$db = new PDO('mysql:host=localhost;dbname=mysql', "root", "", array(PDO::ATTR_PERSISTENT => true));
 
-	$stmtCount = $db->prepare('SELECT * FROM articles');
-	$stmtCount->execute();
-    print($row['img_path']);
+
+    $stmtCount = $db->prepare('SELECT * FROM articles');
+    $stmtCount->execute();
+
+   
 ?>
+
+<a href="/">главная</a>
 
 <div class="container-lg">
         <ul class="row">
@@ -20,7 +24,7 @@
 
                         <div class="block col-3" >
                             <a href="catalog">
-                                <img src="<?php $row['img_path']; ?>"alt="">
+                                <img src="<?php print($row['img_path']); ?>" alt="">
                             </a>
                         </div>
 
