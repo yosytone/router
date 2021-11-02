@@ -9,5 +9,8 @@ if ($route == ''){
 else if ($route == 'login'){
     require 'templates/login.php';
 }
+else if ($route == 'catalog'){
+    require 'templates/catalog.php';
+}
 
 require 'templates/footer.php';

@@ -1,0 +1,65 @@
+body {
+    background: #ffffff;
+}
+
+#search {
+    height: 600px;
+}
+
+form {
+    width: 480px;
+    height: 160px;
+    background: #b89eff;
+    margin: 0 auto;
+    padding: 30px;
+    color: white;
+}
+
+
+input {
+    margin: 8px 0;
+}
+
+
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(167, 228, 218);
+}
+
+h1 {
+    background: #b89eff;
+}
+
+.menu {
+    background: #b89eff;
+    height: 48px;;
+}
+
+#s {
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    position:static;
+    margin-top: 0px;
+}
+
+
+
+.block {
+    height: 200px;
+    margin-left: 65px;
+    margin-bottom: 25px;
+    background-color: wheat;
+}
+
+.menu-catalog {
+    background-color: turquoise;
+}
+
+.block img{
+    width: 100%;
+    height: auto;
+}

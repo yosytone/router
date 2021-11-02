@@ -1,7 +1,27 @@
-<h1>
-    HELLO
-</h1>
+<div>
+    <div class="container-lg">
+        <ul class="row">
+            <h1 class="col-10"   ><a href="/">bookHead</a></h1>
+            <div class="menu col-1" ><a href="catalog">корзина</a></div>
+            <div class="menu col-1" ><a href="login">войти</a></div>
+        </ul>
+    </div>
+</div>
 
-<a href='templates/login.php'><h3>
-    sign in
-</h3></a>
+  <nav class="container-lg mx-auto">
+    <ul class="row">
+      <ol class="col-1" ><a href="catalog">Каталог</a></ol>
+      <ol class="col-1" ><a href="catalog">Категории</a></ol>
+      <ol class="col-6" ></ol>
+    </ul>
+  </nav>
+
+<div id="search">
+
+  <form>
+    <input id="s" name="search"/>
+    <br>
+    <input type="submit" value="Отправить">
+  </form>
+
+</div>  
