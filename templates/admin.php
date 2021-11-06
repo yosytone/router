@@ -1,4 +1,4 @@
-<a href="/">главная</a>
+
 
 <div class="div-art">
 	<form method="post" id="formIMG" class="form-art" enctype="multipart/form-data">

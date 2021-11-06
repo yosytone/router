@@ -1,6 +1,4 @@
-
-
-  <nav class="container-lg mx-auto">
+<nav class="container-lg mx-auto">
     <ul class="row">
       <ol class="col-1" ><a href="catalog">Каталог</a></ol>
       <ol class="col-1" ><a href="admin">админ</a></ol>

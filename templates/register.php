@@ -1,10 +1,8 @@
 <?php
-session_start();
-
-if ($_SESSION['login']) {
-    header('Location: ./');
-}
-
+    session_start();
+    if ($_SESSION['user']) {
+        header('Location: ./');
+    }
 ?>
 
 <!doctype html>
@@ -16,16 +14,16 @@ if ($_SESSION['login']) {
 </head>
 <body>
 
-<!-- Форма авторизации -->
+    <!-- Форма регистрации -->
 
-    <form action="signin" method="post">
+    <form action="signup" method="post">
         <label>Логин</label>
         <input type="text" name="login" placeholder="Введите свой логин">
         <label>Пароль</label>
         <input type="password" name="pass" placeholder="Введите пароль">
         <button type="submit">Войти</button>
         <p>
-            У вас нет аккаунта? - <a href="register">зарегистрируйтесь</a>!
+            У вас уже есть аккаунт? - <a href="login">авторизируйтесь</a>!
         </p>
         <?php
             if ($_SESSION['message']) {

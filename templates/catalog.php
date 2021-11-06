@@ -1,6 +1,6 @@
 
 <?php
-	$db = new PDO('mysql:host=localhost;dbname=mysql', "root", "", array(PDO::ATTR_PERSISTENT => true));
+	require 'config/bd.php';
 
 
     $stmtCount = $db->prepare('SELECT * FROM articles');
@@ -9,7 +9,7 @@
    
 ?>
 
-<a href="/">главная</a>
+
 
 <div class="container-lg">
         <ul class="row">

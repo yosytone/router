@@ -2,6 +2,7 @@
 /* CSS Document */
 
 body{
+	font-family: Montserrat, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -58,5 +59,11 @@ a{
 .block img{
     width: 100%;
     height: auto;
-    
+}
+
+
+#search1 form{
+	display: flex;
+    flex-direction: row;
+    width: 400px;
 }
