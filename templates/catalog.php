@@ -23,7 +23,7 @@
                     ?>
 
                         <div class="block col-3" >
-                            <a href="catalog">
+                            <a href="single<?php print("?id="); print($row['ID']); ?>">
                                 <img src="<?php print($row['img_path']); ?>" alt="">
                             </a>
                         </div>

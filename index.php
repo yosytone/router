@@ -27,10 +27,12 @@ else if ($route == 'cart'){
 
 else if ($route == 'register'){
     require 'templates/register.php';
-
-
-
 }
+
+else if ($route == 'single'){
+    require 'templates/single.php';
+}
+
 else if ($route == 'signup'){
     require 'templates/vendor/signup.php';
 }
