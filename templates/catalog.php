@@ -26,6 +26,16 @@
                             <a href="single<?php print("?id="); print($row['ID']); ?>">
                                 <img src="<?php print($row['img_path']); ?>" alt="">
                             </a>
+                            <a href="cart<?php  print("?prod_id="); print($row['ID']);?>">
+                                В КОРЗИНУ
+                            </a>
+
+                            <!-- Асинхронная корзина
+                            <a class="product_link_id" data-id="<?php print($row['ID']);?>">
+                                В КОРЗИНУ
+                            </a>
+                            -->
+
                         </div>
 
                     <?php
