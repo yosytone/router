@@ -1,33 +1,31 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Интернет Магазин</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="./style/style.css">
-</head>
-
-<body>
-
-<?php
-    session_start();
-  ?>
-
-<div id="start">
-    <div class="container-lg">
-        <ul class="row">
-            <h3 class="col-10" ><a href="/">bookHead</a></h3>
-            <div class="menu col-1" ><a href="cart">корзина</a></div>
-            <div class="menu col-1" >
-            <?php
-        if(!empty($_SESSION['login']))
-            print('<a href="./?quit=1" title ="Выйти"> Выйти</a>');
-        else
-            print('<a href="login" title = "Войти">Войти</a>');
-        ?>
-                                                                </div>
+    <head>
+        <meta charset="utf-8">
+        <title>Интернет Магазин</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+    <body>
 
 
-        </ul>
-    </div>
-</div>
+        
+
+        <header class="header">
+            <div class="container">
+                <div class="header_inner">
+                    <div class="logo">BOOKS</div>
+                    <nav class="nav">
+                        <a class="nav_link" href="cart">КОРЗИНА(<span id="cart_count">0</span>)</a>
+                        <a class="nav_link" href="catalog">каталог</a>
+                        <a class="nav_link" href="admin">админ</a>
+                        <?php
+                            if(!empty($_SESSION['login']))
+                                print('<a class="nav_link" href="./?quit=1" title ="Выйти"> ВЫЙТИ</a>');
+                            else
+                                print('<a class="nav_link" href="login" title = "Войти">ВОЙТИ</a>');
+                        ?>
+                    </nav>
+                </div>
+            </div>
+        </header>

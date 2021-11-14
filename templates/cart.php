@@ -8,7 +8,7 @@ require 'config/function.php';
 
 if ( isset($_GET['delete_id']) && isset($_SESSION['prod_list']) ) {
 	foreach ($_SESSION['prod_list'] as $key => $value) {
-		if ( $value['ID'] == $_GET['delete_id'] ) {
+		if ( $value['id_book'] == $_GET['delete_id'] ) {
 			unset($_SESSION['prod_list'][$key]);
 		}		
 	}
@@ -31,7 +31,7 @@ if ( isset($_GET['prod_id']) && !empty($_GET['prod_id']) ) {
 
 		if ( isset($_SESSION['prod_list']) ) {
 			foreach ($_SESSION['prod_list'] as $value) {
-				if ( $value['ID'] == $current_added_course['ID'] ) {
+				if ( $value['id_book'] == $current_added_course['id_book'] ) {
 					$course_check = true;
 				}
 			}
@@ -76,8 +76,8 @@ if ( isset($_GET['prod_id']) && !empty($_GET['prod_id']) ) {
 
 				<li>
 					<?php echo $course['title']; ?> | 
-                    <?php echo $course['ID']; ?> |
-					<a href="cart?delete_id=<?php echo $course['ID'];?>">Х</a>
+                    <?php echo $course['id_book']; ?> |
+					<a href="cart?delete_id=<?php echo $course['id_book'];?>">Х</a>
 				</li>
 
 			<?php endforeach; ?>

@@ -1,25 +1,13 @@
 
-
-  <nav class="container-lg mx-auto">
-    <ul class="row">
-      <ol class="col-1" ><a href="catalog">Каталог</a></ol>
-      <ol class="col-1" ><a href="admin">админ</a></ol>
-      <ol class="col-6" ></ol>
-    </ul>
-  </nav>
-
-<div class="container-lg mx-auto" id="search1">
-
-  <form id="s">
-    <input type=search placeholder="Введите для поиска"  name="search">
-    <br>
-    <input type="submit" value="Поиск">
-  </form>
-
-
-
-  <?php
-
-  ?>
-
-</div>  
+        <div class="catalog">
+            <div class="container">
+                
+                <div class="catalog_nav">
+                    <a class="catalog_nav_link" href="#">All</a>
+                    <a class="catalog_nav_link" href="#">Наука</a>
+                    <a class="catalog_nav_link" href="#">Психология</a>
+                    <a class="catalog_nav_link" href="#">Фантастика</a>
+                    <a class="catalog_nav_link" href="#">Прочее>></a>
+                </div>
+            </div>
+        </div>

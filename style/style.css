@@ -1,16 +1,181 @@
-@charset "utf-8";
-/* CSS Document */
-
-body{
-	font-family: Montserrat, sans-serif;
-	margin: 0;
-	padding: 0;
+html {
+    color: #333;
 }
 
-a{
-	text-decoration: none;
-	color: #232327;
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 30px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav {
+    font-size: 14px;
+}
+
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+
+    transition: color 0.1s linear;
+}
+
+.nav_link:hover {
+    color: salmon;
+}
+
+/* конец header */
+
+.catalog {
+    padding: 2.8rem 0;
+}
+
+.catalog_nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.catalog_nav_link {
+    margin: 0 1rem;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+
+.catalog_nav_link:hover {
+    text-decoration: underline;
+}
+
+/* catalog */
+
+.good {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem 2.8rem;
+}
+
+.good_col {
+    flex-basis: 20%;
+    padding: 1rem;
+    max-width: 20%;
+}
+
+.good_item {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 10px;;
+    box-shadow:0 0 4px;
+
+    transition: .2s linear;
+}
+
+.good_item:hover {
+    box-shadow: 0 0 15px;
+}
+
+.filters__img {
+    height: 330px;
+    overflow: hidden;
+
+  }
+
+.good_image {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+.good_content {
+    padding: 0.8rem;
+}
+
+.good_price {
+    font-size: 0.8rem;
+    color: black;
+    font-weight: bold;
+}
+
+.good_title {
+    font-size: 1.06rem;
+    color: black;
+}
+
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.1em 1.8em;
+    min-width: 100px;
+    margin-top: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+
+    text-align: center;
+
+    transition: background-color .2s linear, 
+    color .2s linear, box-shadow .2s linear;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    background-color: salmon;
+    color: white;
+}
+
+
+
+
+
 
 .div-art{
 	width: 900px;
@@ -31,39 +196,3 @@ a{
 	width: 350px;
 }
 
-.cart img{
-	width: 25%;
-	height: auto;
-	margin-left: 5%;
-	margin-bottom: 50px;
-}
-
-
-
-
-#start {
-    background-color: rgb(154, 100, 255);
-}
-
-.block {
-    height: 200px;
-    margin-left: 65px;
-    margin-bottom: 25px;
-    background-color: wheat;
-}
-
-.menu-catalog {
-    background-color: turquoise;
-}
-
-.block img{
-    width: 100%;
-    height: auto;
-}
-
-
-#search1 form{
-	display: flex;
-    flex-direction: row;
-    width: 400px;
-}

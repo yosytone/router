@@ -14,4 +14,6 @@ $("#formIMG").submit(function(event){
 // удаляем значения инпутов
 $("#title").val('');
 $("#pics").val('');
+$("#text").val('');
+
 });

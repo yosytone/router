@@ -3,50 +3,93 @@
 	require 'config/bd.php';
 
 
-    $stmtCount = $db->prepare('SELECT * FROM articles');
-    $stmtCount->execute();
+    $stmt = $db->prepare('SELECT * FROM book');
+    $stmt->execute();
+
 
    
 ?>
 
 
+        <div class="catalog">
+            <div class="container">
+                
+                <div class="catalog_nav">
+                    <a class="catalog_nav_link" href="#">All</a>
+                    <a class="catalog_nav_link" href="#">Наука</a>
+                    <a class="catalog_nav_link" href="#">Психология</a>
+                    <a class="catalog_nav_link" href="#">Фантастика</a>
+                    <a class="catalog_nav_link" href="#">Прочее>></a>
+                </div>
 
-<div class="container-lg">
-        <ul class="row">
-            <div class="menu-catalog col-3" ></div>
+                <div class="good">
 
-            <div class="col-9 container-lg mx-auto" >
-                <ul class="row">
-                    
-                    <?php
-                        while($row = $stmtCount->fetch(PDO::FETCH_ASSOC)) {
+                <?php
+                        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     ?>
 
-                        <div class="block col-3" >
-                            <a href="single<?php print("?id="); print($row['ID']); ?>">
-                                <img src="<?php print($row['img_path']); ?>" alt="">
-                            </a>
-                            <a href="cart<?php  print("?prod_id="); print($row['ID']);?>">
-                                В КОРЗИНУ
-                            </a>
+                    <div class="good_col">
+                        <div class="good_item">
+                            <div class="filters__img">
+                                <a href="single<?php print("?id="); print($row['id_book']); ?>"><img class="good_image" src="<?php print($row['img_path']); ?>" alt=""></a>
+                            </div>
+                            <div class="good_content">
+                                <div class="good_price">
+                                    <?php
+                                        $new_id = $row['id_book'];
+                                        $stmt2 = $db->prepare('SELECT * FROM price WHERE id_book=?');
+                                        $stmt2->execute([$new_id]);
+                                        $row2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+                                        print($row2['price']); 
 
-                            <!-- Асинхронная корзина
-                            <a class="product_link_id" data-id="<?php print($row['ID']);?>">
-                                В КОРЗИНУ
-                            </a>
-                            -->
+                                    ?>
+                                </div>
+                                <div class="good_title">
+                                    <?php print($row['title']); ?>
+                                </div>
 
+                                <?php
+                                    $new_id = $row['id_author'];
+                                    $stmt3 = $db->prepare('SELECT * FROM author WHERE id_author=?');
+                                    $stmt3->execute([$new_id]);
+
+                                    $row3 = $stmt3->fetch(PDO::FETCH_ASSOC); 
+                                ?>
+
+                                <div class="good_author">
+                                    <?php print($row3['first_name']); print($row3['last_name']); ?>
+                                </div>
+
+
+                                <?php
+                                    $new_id = $row['id_genre'];
+                                    $stmt4 = $db->prepare('SELECT * FROM genre WHERE id_genre=?');
+                                    $stmt4->execute([$new_id]);
+
+                                    $row4 = $stmt4->fetch(PDO::FETCH_ASSOC); 
+                                ?>
+
+                                <div class="good_genre">
+                                    <?php print($row4['name_genre']); ?>
+                                </div>
+
+
+                                <div class="good_btn">
+                                    <a class="product_link_id btn" data-id="<?php print($row['id_book']);?>">В КОРЗИНУ
+                                    </a>
+                                </div>
+                            </div>  
                         </div>
+                    </div>
 
                     <?php
                         }
                     ?>
 
 
-                </ul>
+                </div>
 
             </div>
-        </ul>
+        </div>
 
-    </div>
-</div>
+        <!--load more-->

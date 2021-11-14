@@ -5,6 +5,7 @@
   
   $state = getA($_GET["id"]);
   $title = $state["title"];
+  $about = $state["about"];
 
 ?>
 
@@ -21,9 +22,15 @@
     <h1>
     <?php 
         print ($title);
-        print ($_GET["id"]);
     ?>
     </h1>
+
+    <div>
+    <?php 
+        print ($about);
+    ?>
+    </div>
+
       <div class="block col-3" >
           <img src="<?php print($state['img_path']); ?>" alt="">
           </a>

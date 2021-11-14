@@ -40,6 +40,10 @@ else if ($route == 'signin'){
     require 'templates/vendor/signin.php';
 }
 
+else if ($route == 'api'){
+    require 'config/api.php';
+}
+
 session_start();
 if (!empty($_GET['quit'])) {
     session_destroy();

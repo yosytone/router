@@ -6,6 +6,7 @@
 			<p><input type="text" placeholder="Заголовок статьи" class="insrt-field title" id="title" name="title"></p>
 			<p><textarea placeholder="Текст статьи" class="insrt-field text" id="text" name="text"></textarea></p>
 			<p>Прикрепить картинку <input type="file" id="pics" name="pics" class="insrt-field pics"></p>
+			<p>Прикрепить файл <input type="file" id="bookf" name="bookf" class="insrt-field bookf"></p>
 			<p><input type="submit" value="Создать" name="send" class="insrt-field send"></p>
 		</div>
 	</form>
