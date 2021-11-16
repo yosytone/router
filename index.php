@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $route = $_GET['route'];
 
 require 'templates/header.php';
@@ -44,7 +45,7 @@ else if ($route == 'api'){
     require 'config/api.php';
 }
 
-session_start();
+
 if (!empty($_GET['quit'])) {
     session_destroy();
     $_SESSION['login'] = '';

@@ -10,7 +10,7 @@
 		$title = $_POST['title'];
 		$about = $_POST['text'];
 
-		$id_genre = 1;
+		$id_genre = $_POST['genres'];
 		$id_author = 1;
 		$year_book = "2000";
 
