@@ -8,15 +8,26 @@
     </head>
     <body>
 
-
-        
-
         <header class="header">
             <div class="container">
                 <div class="header_inner">
                     <div class="logo">BOOKS</div>
                     <nav class="nav">
-                        <a class="nav_link" href="cart">КОРЗИНА(<span id="cart_count">0</span>)</a>
+                        <a class="nav_link" href="cart">
+                            КОРЗИНА(
+                            <span id="cart_count"> 
+
+                                <?php 
+
+                                if (isset($_SESSION['prod_list'])){
+                                    echo count($_SESSION['prod_list']); 
+                                }
+
+                                ?>
+
+                             </span>
+                             )
+                        </a>
                         <a class="nav_link" href="catalog">каталог</a>
                         <a class="nav_link" href="admin">админ</a>
                         <?php
