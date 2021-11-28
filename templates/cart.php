@@ -94,7 +94,15 @@ if ( isset($_GET['prod_id']) && !empty($_GET['prod_id']) ) {
 
 	<a href="index.php">Продолжить покупки</a>
 	<br>
-	<a href="order.php">Оформить заказ</a>
+	
+	<?php
+
+		if ($_SESSION['prod_list']) {
+			print("<a href="."order".">Оформить заказ</a>");
+		}
+		
+	?>
+	
 	
 </body>
 </html>

@@ -7,7 +7,7 @@
 
     require 'config/bd.php';
 
-    $stmt1 = $db->prepare('SELECT * FROM logintab WHERE login = ?');
+    $stmt1 = $db->prepare('SELECT * FROM person WHERE login = ?');
     $stmt1->execute([$_POST['login']]);
     $row = $stmt1->fetch(PDO::FETCH_ASSOC);
 
@@ -27,7 +27,7 @@
 
     $_SESSION['login'] =  $row['login'];
     // Записываем ID пользователя.
-    $_SESSION['uid'] = $row['UID'];
+    $_SESSION['uid'] = $row['uid'];
 
 
     // Делаем перенаправление.

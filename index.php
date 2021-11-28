@@ -26,6 +26,11 @@ else if ($route == 'cart'){
     require 'templates/cart.php';
 }
 
+else if ($route == 'order'){
+    require 'templates/order.php';
+}
+
+
 else if ($route == 'register'){
     require 'templates/register.php';
 }
@@ -40,6 +45,10 @@ else if ($route == 'signup'){
 else if ($route == 'signin'){
     require 'templates/vendor/signin.php';
 }
+else if ($route == 'order_confirm'){
+    require 'templates/vendor/order_confirm.php';
+}
+
 
 else if ($route == 'api'){
     require 'config/api.php';

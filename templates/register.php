@@ -21,6 +21,7 @@
         <input type="text" name="login" placeholder="Введите свой логин">
         <label>Пароль</label>
         <input type="password" name="pass" placeholder="Введите пароль">
+        <input type="email" name="email" placeholder="Введите почту">
         <button type="submit">Войти</button>
         <p>
             У вас уже есть аккаунт? - <a href="login">авторизируйтесь</a>!
