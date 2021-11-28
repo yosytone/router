@@ -7,33 +7,55 @@
   $title = $state["title"];
   $about = $state["about"];
 
+
+
 ?>
 
-<nav class="container-lg mx-auto">
-    <ul class="row">
-      <ol class="col-1" ><a href="catalog">Каталог</a></ol>
-      <ol class="col-1" ><a href="admin">админ</a></ol>
-      <ol class="col-6" ></ol>
-    </ul>
-  </nav>
+<div class="single">
+  <div class="container">
+    <div class="singles">
 
-<div class="container-lg mx-auto" id="search1">
+      <div class="single_col1">
+        <div class="single_item">
+        
+          <div class="filters_img1">
+            <img class="single_img" src="<?php print($state['img_path']); ?>" alt="">
+          </div>
 
-    <h1>
-    <?php 
-        print ($title);
-    ?>
-    </h1>
-
-    <div>
-    <?php 
-        print ($about);
-    ?>
-    </div>
-
-      <div class="block col-3" >
-          <img src="<?php print($state['img_path']); ?>" alt="">
-          </a>
+        </div>
       </div>
 
-</div>  
+
+      <div class="single_col2">
+        <div class="single_item">
+
+          <div class="single_title">
+            <?php 
+              $new_id = $_GET["id"];
+              $stmt3 = $db->prepare('SELECT * FROM author WHERE id_author=?');
+              $stmt3->execute([$new_id]);
+              $row3 = $stmt3->fetch(PDO::FETCH_ASSOC); 
+
+              print($row3['fio']);
+              print ("-");
+              print ($title);
+            ?>
+          </div>
+
+          <div class="single_about">
+            <?php 
+              print ($about);
+            ?>
+              
+              тогда текст который будет выходить за пределы div показываться не будет, а иначе "Текст без пробелов не переносится, это такое правило."
+              тогда текст который будет выходить за пределы div показываться не будет, а иначе "Текст без пробелов не переносится, это такое правило."
+              
+        
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div> 
+</div>   

@@ -5,6 +5,9 @@ require 'config/bd.php';
 $stmt = $db->prepare('SELECT * FROM genre');
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC); 
+
+$stmt2 = $db->prepare('SELECT * FROM author');
+$stmt2->execute();
 ?>
 
 <div class="div-art">
@@ -24,6 +27,18 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 					}
 					?>
     			</select>
+
+			<p>Автор</p>
+    			<select name="authors" >
+				<?php
+                        while($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+                    
+            			print('<option value="'.$row2['id_author'].'">'.$row2['fio'].'</option>');
+					}
+					?>
+    			</select>
+
+				<p><input type="number" placeholder="цена" step="1" class="insrt-field text" name="prices"></p>
 
 
 			<p>Прикрепить картинку <input type="file" id="pics" name="pics" class="insrt-field pics"></p>

@@ -2,12 +2,16 @@
 <?php
 	require 'config/bd.php';
 
+    $state = $_GET["sid"];
 
     $stmt = $db->prepare('SELECT * FROM book');
     $stmt->execute();
+    
+    if ($state) {
+        $stmt = $db->prepare('SELECT * FROM book WHERE id_genre = ?');
+        $stmt->execute([$state]);
+    }
 
-
-   
 ?>
 
 
@@ -15,11 +19,11 @@
             <div class="container">
                 
                 <div class="catalog_nav">
-                    <a class="catalog_nav_link" href="#">All</a>
-                    <a class="catalog_nav_link" href="#">Наука</a>
-                    <a class="catalog_nav_link" href="#">Психология</a>
-                    <a class="catalog_nav_link" href="#">Фантастика</a>
-                    <a class="catalog_nav_link" href="#">Прочее>></a>
+                    <a href="<?php print("?sid="); print(0); ?>" class="catalog_nav_link" >All</a>
+                    <a href="<?php print("?sid="); print(2); ?>" class="catalog_nav_link" >Наука</a>
+                    <a href="<?php print("?sid="); print(4); ?>" class="catalog_nav_link" >Психология</a>
+                    <a href="<?php print("?sid="); print(3); ?>" class="catalog_nav_link" >Фантастика</a>
+                    <a href="<?php print("?sid="); print(7); ?>" class="catalog_nav_link" >Прочее>></a>
                 </div>
 
                 <div class="good">
@@ -57,7 +61,7 @@
                                 ?>
 
                                 <div class="good_author">
-                                    <?php print($row3['first_name']); print($row3['last_name']); ?>
+                                    <?php print($row3['fio']); ?>
                                 </div>
 
 

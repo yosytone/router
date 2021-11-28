@@ -11,7 +11,7 @@
 		$about = $_POST['text'];
 
 		$id_genre = $_POST['genres'];
-		$id_author = 1;
+		$id_author = $_POST['authors'];
 		$year_book = "2000";
 
 		$pictmp = $_FILES['pics']['tmp_name'];
@@ -37,6 +37,11 @@
 		$data->execute();
 		move_uploaded_file($pictmp, $filedir);
 		move_uploaded_file($booktmp, $filedir_book);
+
+		$stmt2 = $db->prepare("INSERT INTO price SET id_book = ?, price = ?");
+        $id = $db->lastInsertId();
+        $stmt2 -> execute([$id, $_POST['prices']]);
+
 
 ?>
 

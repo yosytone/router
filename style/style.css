@@ -177,6 +177,59 @@ body {
 
 
 
+.single {
+    padding: 2.8rem 0;
+}
+
+.singles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem 2.8rem;
+}
+
+.single_col1 {
+    flex-basis: 30%;
+    padding: 1rem;
+    max-width: 30%;
+
+}
+
+.single_col2 {
+    flex-basis: 50%;
+    padding: 1rem;
+    max-width: 50%;
+
+}
+
+
+.single_item {
+    overflow: hidden;
+    max-width: 100%;
+    
+}
+
+
+.filters__img1 {
+    overflow: hidden;
+  }
+
+.single_img {
+    display: block;
+    min-width: 100%;
+    height: 500px;
+}
+
+.single_title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.single_about {
+
+}
+
+
+
 .div-art{
 	width: 900px;
 	margin: 0 auto;
