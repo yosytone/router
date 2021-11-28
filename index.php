@@ -30,6 +30,10 @@ else if ($route == 'order'){
     require 'templates/order.php';
 }
 
+else if ($route == 'account'){
+    require 'templates/account.php';
+}
+
 
 else if ($route == 'register'){
     require 'templates/register.php';
@@ -58,6 +62,7 @@ else if ($route == 'api'){
 if (!empty($_GET['quit'])) {
     session_destroy();
     $_SESSION['login'] = '';
+    $_SESSION['uid'] = '';
     header('Location: login');
 }
 

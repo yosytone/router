@@ -31,8 +31,10 @@
                         <a class="nav_link" href="catalog">каталог</a>
                         <a class="nav_link" href="admin">админ</a>
                         <?php
-                            if(!empty($_SESSION['login']))
+                            if(!empty($_SESSION['login'])) {
                                 print('<a class="nav_link" href="./?quit=1" title ="Выйти"> ВЫЙТИ</a>');
+                                print('<a class="nav_link" href="account" title ="account"> МОЯ СТРАНИЦА</a>');
+                            }
                             else
                                 print('<a class="nav_link" href="login" title = "Войти">ВОЙТИ</a>');
                         ?>
