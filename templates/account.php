@@ -16,8 +16,12 @@
         $stmt2->execute([$new_id]);
         $row2 = $stmt2->fetch(PDO::FETCH_ASSOC);
         print($row2['title']); 
+        ?>
+            <a href="<?php print ($row2['book_path']); ?>" download>Ссылка</a>
+        <?php
+        
+        print ("<br></br>");
         
     }
-
 ?>
 

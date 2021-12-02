@@ -52,10 +52,19 @@
               
         
           </div>
+
+          <div class="single_btn">
+            <a class="product_link_id btn" data-id="<?php print($row['id_book']);?>">В КОРЗИНУ
+            </a>
+          </div>
+
         </div>
       </div>
 
 
     </div>
+
+   
+
   </div> 
 </div>   
