@@ -14,18 +14,15 @@
 
 ?>
 
-
-
-
         <div class="catalog">
             <div class="container">
                 
                 <div class="catalog_nav">
                     <a href="<?php print("?sid="); print(0); ?>" class="catalog_nav_link" >All</a>
-                    <a href="<?php print("?sid="); print(2); ?>" class="catalog_nav_link" >Наука</a>
-                    <a href="<?php print("?sid="); print(4); ?>" class="catalog_nav_link" >Психология</a>
+                    <a href="<?php print("?sid="); print(1); ?>" class="catalog_nav_link" >Наука</a>
+                    <a href="<?php print("?sid="); print(2); ?>" class="catalog_nav_link" >Психология</a>
                     <a href="<?php print("?sid="); print(3); ?>" class="catalog_nav_link" >Фантастика</a>
-                    <a href="<?php print("?sid="); print(7); ?>" class="catalog_nav_link" >Прочее>></a>
+                    <a href="<?php print("?sid="); print(4); ?>" class="catalog_nav_link" >Прочее>></a>
                 </div>
 
                 <div class="good">
@@ -37,7 +34,10 @@
                     <div class="good_col">
                         <div class="good_item">
                             <div class="filters__img">
-                                <a href="single<?php print("?id="); print($row['id_book']); ?>"><img class="good_image" src="<?php print($row['img_path']); ?>" alt=""></a>
+
+                                <a href="single<?php print("?id="); print($row['id_book']); ?>">
+                                <img class="good_image" src="<?php print($row['img_path']); ?>" alt=""></a>
+                                
                             </div>
                             <div class="good_content">
                                 <div class="good_price">

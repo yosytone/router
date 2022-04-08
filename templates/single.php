@@ -1,16 +1,11 @@
 <?php
-  require 'config/bd.php';
-  require 'config/function.php';
+  require 'config/bd.php'; //подключаем бд
+  require 'config/function.php'; //подключаем файл с функциями
 
-  
-  $state = getA($_GET["id"]);
-  $title = $state["title"];
-  $about = $state["about"];
-
-
-
+  $state = getA($_GET["id"]); //функция возвращает все атрибуты из таблицы 
+  $title = $state["title"]; //присваивается название товара
+  $about = $state["about"]; //присваивает описание товара
 ?>
-
 <div class="single">
   <div class="container">
     <div class="singles">
@@ -24,7 +19,6 @@
 
         </div>
       </div>
-
 
       <div class="single_col2">
         <div class="single_item">
@@ -46,11 +40,6 @@
             <?php 
               print ($about);
             ?>
-              
-              тогда текст который будет выходить за пределы div показываться не будет, а иначе "Текст без пробелов не переносится, это такое правило."
-              тогда текст который будет выходить за пределы div показываться не будет, а иначе "Текст без пробелов не переносится, это такое правило."
-              
-        
           </div>
 
           <div class="single_btn">
@@ -64,7 +53,6 @@
 
     </div>
 
-   
 
   </div> 
 </div>   
